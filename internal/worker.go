@@ -296,6 +296,13 @@ type (
 		// default: false
 		EnableLoggingInReplay bool
 
+		// Optional: Enable logging of workflow lifecycle events.
+		// When enabled, the worker logs a message when each activity attempt starts and when it ends,
+		// including the outcome (succeeded / failed / canceled / timeout / pending / failed_to_report).
+		// Note: this currently covers activity attempts only
+		// default: false
+		EnableWorkflowLifecycleLogging bool
+
 		// Optional: Disable running workflow workers.
 		// default: false
 		DisableWorkflowWorker bool
